@@ -1,0 +1,88 @@
+*{margin:0;padding:0}
+
+html, body{
+	height: 100%;
+}
+
+#container
+{
+	position: relative; 
+	margin: auto;
+	width: 100%; 
+	height: 100%;
+	background-color: #0033CC; 
+}
+#kop
+{
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	right: 0;
+	height: 80px; 
+	background-color: #990000; 
+}
+#menu
+{
+	position: absolute; 
+	left: 0; 
+	top: 80px; 
+	width: 200px; 
+	bottom: 0;
+	background-color: #000099;  
+}
+#content
+{
+	position: absolute; 
+	left: 200px; 
+	top: 80px; 
+	bottom: 0;
+	right: 0;
+	background-color: #D0D0D0;
+	
+	overflow: auto;
+}
+
+@keyframes regenboog{
+	0% {
+		background-color: #ff0000;
+	}
+	33% {
+		background-color: #00ff00;
+		border-radius: 0;
+		width: auto;
+	}
+	66% {
+		background-color: #0000ff;
+		border-radius: 15px;
+		width: 200px;
+	}
+	100% {
+		background-color: #ff0000;
+	}
+}
+@keyframes glow{
+	0% {
+		box-shadow: 0px 0px 0px 0px #ffff00;
+	}
+	100% {
+		box-shadow: 0px 0px 20px 0px #ffff00;
+	}
+}
+
+.knop {
+	display: inline-block;
+	padding: 0.5em;
+	border: solid 1px #000000;
+	border-radius: 15px;
+	
+	
+	animation-name: regenboog;
+    animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+.knop:hover{
+	animation-name: glow;
+    animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
