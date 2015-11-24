@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<link href="Hoofdpagina (2).css" rel="stylesheet" />
+	<link href="loginpagina.css" rel="stylesheet" />
 	</head>
 	
 	<body>
 		<div id="container">
 			<div id="kop">
-			<p> "Hoi" </p>
+				<p> "hee"</p>			
 			</div>
 			
 			<div id="menu">
-			<p> "Hallo"</p>
+				<p> "Hallo"</p>
 			</div>
 			
-			<div id="body">
-			<p> "Hoidoe" </p>
+			<div id="content">
+				<form method="post" action="data.php">
+					<fieldset>
+						<legend>Invoer formulier</legend>
+						<ol>
+							<li>
+								<label for="eerste">Emailadres:</label>
+								<input type="text" id="eerste" name="emailadres"/>
+							</li>
+							<li>
+								<label for="tweede">Wachtwoord:</label>
+								<input type="text" id="tweede" name="wachtwoord"/>
+							</li>
+						</ol>
+								<input class="knop" type="submit" value="Login"/>
+					</fieldset>
+				</form>
 			</div>	
 		</div>
 	</body>
