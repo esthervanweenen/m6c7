@@ -1,11 +1,11 @@
 <?php
 
-$kalenderNaam = $_POST['kalender'];
+$kalenderNaam = $_POST['gebruiker'];
 
 include ("functies.php");
 dbconnect();
 
-$query = "INSERT INTO Kalender(activiteitnaam) VALUES('$kalenderNaam');";
+$query = "INSERT INTO Kalender(activiteitnaam) VALUES('$gebruikerNaam');";
 
 $result = mysql_query($query);
 if ($result == false){
@@ -16,7 +16,3 @@ if ($result == false){
 echo "<a href='queryEditor.html'>Ga terug naar het formulier</a>";
 
 ?>
-
-
-
-
