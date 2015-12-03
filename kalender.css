@@ -1,0 +1,37 @@
+*{margin:0;padding:0}
+
+@charset "utf-8";
+.kalender {
+   width: 600px;
+}
+.kalender div {
+   float: left;
+   height: 80px;
+   width: 80px;
+   border: 1px solid #333333;
+}
+.kalender .monheader {
+   font-weight: bold;
+   color: #FFFFFF;
+   text-align: center;
+   height: 20px;
+   width: 572px;
+   background-color: #333333;
+}
+.kalender .dayheader {
+   font-weight: bold;
+   color: #FFFFFF;
+   text-align: center;
+   height: 20px;
+   background-color: #000000;
+}
+.kalender .day {
+   background-color: #FFFFCC;
+}
+.kalender .today {
+   background-color: #FFCC00;
+   border-color: #CC0000;
+}
+.kalender .inactive {
+   background-color: #666666;
+}
