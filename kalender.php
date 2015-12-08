@@ -1,6 +1,19 @@
 <?php
 date_default_timezone_set( 'Europe/Amsterdam');
-
+$arraymaand = array(
+    "Januari",
+    "Februari",
+    "Maart",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Augustus",
+    "September",
+    "Oktober",
+    "November",
+    "December"
+    );
 
 $today = getdate();
 if(isset($_GET['mon'])){
@@ -23,19 +36,27 @@ $last = getdate($end);
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Kalender</title>
-		<link href="kalender.css" rel="stylesheet" type="text/css" />
+		<link href="kalender.css" rel="stylesheet" />
 	</head>
  
 	<body>
+		<div id="container">
+		<div id="kop">
+		</div>
+		
+		<div id="menu">
+		</div>
+		
+		<div id="content">
 		<div class="kalender">
-			<div class="monheader"><a href="?">Deze maand</a><?php echo $first['month'] . ' - ' . $first['year']; ?><a href="?mon=<?php echo $first['mon']+1; ?>&amp;year=<?php echo $first['year']; ?>">Volgende</a></div>
-			<div class="dayheader">Sun</div>
-			<div class="dayheader">Mon</div>
-			<div class="dayheader">Tue</div>
-			<div class="dayheader">Wed</div>
-			<div class="dayheader">Thu</div>
-			<div class="dayheader">Fri</div>
-			<div class="dayheader">Sat</div>
+			<div class="monheader"><a href="?">Deze maand</a><?php echo $arraymaand[$first["mon"] - 1] . ' - ' . $first['year']; ?><a href="?mon=<?php echo $first['mon']+1; ?>&amp;year=<?php echo $first['year']; ?>">Volgende</a></div>
+			<div class="dayheader">Zondag</div>
+			<div class="dayheader">Maandag</div>
+			<div class="dayheader">Dinsdag</div>
+			<div class="dayheader">Woensdag</div>
+			<div class="dayheader">Donderdag</div>
+			<div class="dayheader">Vrijdag</div>
+			<div class="dayheader">Zaterdag</div>
 <?php
 	for($i = 0; $i < $first['wday']; $i++){
 	   echo '  <div class="inactive"></div>' . "\n";
@@ -55,6 +76,8 @@ $last = getdate($end);
 	   }
 	}
 ?>
+		</div>
+		</div>
 		</div>
 	</body>
 </html>
