@@ -42,14 +42,20 @@ $last = getdate($end);
 	<body>
 		<div id="container">
 		<div id="kop">
+			<h1>Kalender</h1>
 		</div>
-		
 		<div id="menu">
+				<ol>
+					<li><a href="Hoofdpagina.html">Home</a></li>
+					<li><a href="kalender.php">Kalender</a></li>			
+				</ol>
 		</div>
 		
 		<div id="content">
 		<div class="kalender">
-			<div class="monheader"><a href="?">Deze maand</a><?php echo $arraymaand[$first["mon"] - 1] . ' - ' . $first['year']; ?><a href="?mon=<?php echo $first['mon']+1; ?>&amp;year=<?php echo $first['year']; ?>">Volgende</a></div>
+			<div class="monheader"><a href="?">Huidige maand</a><?php echo $arraymaand[$first["mon"] - 1] . ' - ' . $first['year']; ?>
+			<a href="?mon=<?php echo $first['mon']-1; ?>&amp;year=<?php echo $first['year']; ?>">Vorige</a>
+			<a href="?mon=<?php echo $first['mon']+1; ?>&amp;year=<?php echo $first['year']; ?>">Volgende</a></div>
 			<div class="dayheader">Zondag</div>
 			<div class="dayheader">Maandag</div>
 			<div class="dayheader">Dinsdag</div>

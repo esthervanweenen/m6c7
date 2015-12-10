@@ -10,7 +10,7 @@ html, body{
 	margin: auto;
 	width: 100%; 
 	height: 100%;
-	background-color: #990000; 
+	background-color: #FFFFFF; 
 }
 #kop
 {
@@ -19,7 +19,7 @@ html, body{
 	top: 0; 
 	right: 0;
 	height: 80px; 
-	background-color: #000099; 
+	background-color: #177DE3; 
 }
 #menu
 {
@@ -28,7 +28,7 @@ html, body{
 	top: 80px; 
 	width: 200px; 
 	bottom: 0;
-	background-color: #0033CC;  
+	background-color: #e1e1e1;  
 }
 #content
 {
@@ -37,7 +37,7 @@ html, body{
 	top: 80px; 
 	bottom: 0;
 	right: 0;
-	background-color: #D0D0D0;
+	background-color: #e5e5e5;
 	
 	overflow: auto;
 }
@@ -85,6 +85,23 @@ html, body{
 	animation-name: glow;
     animation-duration: 1s;
 	animation-iteration-count: infinite;
+}
+#menu a{
+	text-decoration: none; 
+	background-color: #e5e5e5; 
+	display: block; 
+	border-style: none; 
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+	margin-left: 10px; 
+	margin-right: 10px; 
+	padding-left: 10px; 
+	text-align: center; 
+}
+#menu a{
+	border-style: inset; 
+	background-color: #e5e5e5; 
+	color: #000000; 
 }
 
 
