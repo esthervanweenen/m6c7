@@ -35,7 +35,6 @@ $last = getdate($end);
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Kalender</title>
 		<link href="kalender.css" rel="stylesheet" />
 	</head>
  
@@ -47,7 +46,8 @@ $last = getdate($end);
 		<div id="menu">
 				<ol>
 					<li><a href="Hoofdpagina.html">Home</a></li>
-					<li><a href="kalender.php">Kalender</a></li>			
+					<li><a href="kalender.php">Kalender</a></li>
+					<li><a href="activiteiten.php">Activiteiten</a></li>
 				</ol>
 		</div>
 		

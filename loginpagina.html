@@ -7,28 +7,30 @@
 	<body>
 		<div id="container">
 			<div id="kop">
-				<div id="inlogsysteem">
-				<form method="post" action="data.php">
-						<fieldset>
+				<h1>Re-unie book</h1> 
+			</div>
+			<div id="content">
+				<div id="registreersysteem">
+				<form method="post" action="login.php">
+					<div id="login">
+					<fieldset>
 						<legend>Inloggen</legend>
 						<ol>
 							<li>
-								<label for="eerste">Emailadres</label>
-								<input type="text" id="eerste" name="emailadres"/>
+								<label for="eerste">E-mailadres</label>
+								<input type="email" id="eerste" name="emailadres"/>
 							</li>
 							<li>
 								<label for="tweede">Wachtwoord</label>
-								<input type="text" id="tweede" name="wachtwoord"/>
+								<input type="password" id="tweede" name="wachtwoord"/>
 							</li>
 						</ol>
 								<input class="knop" type="submit" value="Login"/>
 					</fieldset>
-				</form>	
-				</div>
-			</div>
-						
-			<div id="content">
-				<form method="post" action="data.php">
+				</form>
+					</div>					
+					<div id="registreer">				
+				<form method="post" action="registreren.php">
 					<fieldset>
 						<legend>Registreren</legend>
 						<ol>
@@ -38,21 +40,30 @@
 							</li>
 							<li>
 								<label for="tweede">Wachtwoord</label>
-								<input type="text" id="tweede" name="wachtwoord"/>
+								<input type="password" id="tweede" name="wachtwoord"/>
 							</li>
 							<li>
 								<label for="eerste">Geboortedatum</label>
-								<input type="text" id="eerste" name="geboortedatum"/>
+								<input type="date" id="eerste" name="geboortedatum"/>
 							</li>
 							<li>
-								<label for="eerste">Emailadres</label>
-								<input type="text" id="eerste" name="emailadres"/>
+								<label for="eerste">E-mailadres</label>
+								<input type="email" id="eerste" name="emailadres"/>
 							</li>
+							<!--<li>
+								<label for="eerste">Rol</label>
+								<input type="radio" id="eerste" name="rol" value="beheerder" checked> beheerder
+								<input type="radio" id="eerste" name="rol" value="editor" checked> editor
+								<input type="radio" id="eerste" name="rol" value="oudleerling" checked> oudleerling
+							</li> -->
 						</ol>
 								<input class="knop" type="submit" value="Registreer"/>
 					</fieldset>
 				</form>
+					</div>					
+				</div>
 			</div>	
+			
 		</div>
 	</body>
 </html>

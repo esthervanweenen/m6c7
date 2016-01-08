@@ -1,15 +1,14 @@
-<?php include('loginCheck.php'); ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
-	<link href="Hoofdpagina.css" rel="stylesheet" />
+	<link href="activiteiten.css" rel="stylesheet" />
 	</head>
 	
 	<body>
 		<div id="container">
 			<div id="kop">
-				<h1>Home</h1>
-				
+				<h1>Activiteiten</h1>
 			</div>
 			
 			<div id="menu">
@@ -21,13 +20,9 @@
 			</div>
 			
 			<div id="content">
-				<p> "Hoidoe" </p>
-				<a href="#" class="knop">Klik</a>
+				
 			</div>	
 		</div>
 	</body>
 </html>
-
-
-
 

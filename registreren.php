@@ -1,22 +1,25 @@
 <?php
 session_start(); 
 
-$rol = $_POST['rol']; 
 $naam = $_POST['naam']; 
-$ww = $_POST['ww']; 
-$gb = $_POST['gb']; 
-$em = $_POST['em']; 
+$ww = $_POST['wachtwoord']; 
+$gb = $_POST['geboortedatum']; 
+$em = $_POST['emailadres']; 
+$rol = $_POST['rol']; 
 
-include( 'dbconnect.php' ); //=> fucties.php
-$db = connect(); //dbconnect()
+include( 'databaseFuncties.php' ); //=> fucties.php
 
-$query = "INSERT INTO Gebruiker (rol, naam, wachtwoord, geboortedatum, emailadres ) VALUES ($rol, '$naam', '$ww', $gb, '$em' ); "; 
-
-echo $query; 
+$query = "INSERT INTO Gebruiker (naam, wachtwoord, geboortedatum, emailadres, rol ) VALUES ('$naam', '$ww', '$gb', '$em', '$rol' ); "; 
 $result = mysql_query ( $query); 
-if ( $result ){
-	echo 'Succesvol geregistreerd.'; 
+
+if( $result ){
+	$_SESSION['login'] = true;
+	$_SESSION['user'] = $em;
+	
+	header('Location: Hoofdpagina.html');
+	echo 'Succes!';
 } else {
-	echo 'Mislukt, probeerd het later nog eens. '; 
-} 
+	header('Location: loginpagina.html');
+	echo 'Mislukt.';
+}
 ?>

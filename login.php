@@ -1,16 +1,29 @@
 <?php
+/*echo "<h1>" . $_POST['een'] . "</h1>";
+	echo "<h1>" . $_POST['twee'] . "</h1>";
+
+	echo "<a href='login.html'> Terug naar het formulier</a>"*/
 session_start();
 
-$lln = $_POST['lln'];
-$ww = $_POST['ww'];
+$email = $_POST['emailadres'];
+$ww = $_POST['wachtwoord'];
 
-if( $lln >= 100000 && $lln < 1000000 && 
-		$ww == 'test' ){
-	$_SESSION['login'] = true;
-	$_SESSION['user'] = $lln;
-	
-	echo 'Succes!';
-} else {
-	echo 'Mislukt.';
+include( 'databaseFuncties.php' );
+
+$query = "SELECT * FROM Gebruiker WHERE emailadres='$email' AND wachtwoord='$ww';";
+
+$result = mysql_query( $query );
+
+if( $result ){
+	if( mysql_num_rows( $result ) == 1 ){
+		$_SESSION['login'] = true;
+		$_SESSION['user'] = $email;
+		
+		header('Location: Hoofdpagina.html');
+		echo 'Succes!';
+	} else {
+		header('Location: loginpagina.html');
+		echo 'Mislukt.';
+	}
 }
 ?>
